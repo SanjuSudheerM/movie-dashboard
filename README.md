@@ -4,14 +4,6 @@ Fink is a movie dashboard powered by [TMDB's](https://developers.themoviedb.org/
 #### Dashboard
 ![desktop](src/assets/doc-images/landing.png)
 
-#### Dashboard - On hovering a movie
-![desktop-on-hover](src/assets/doc-images/on-hover.png)
-
-#### IPad View
-[![tab-view](src/assets/doc-images/ipad.png)](width)
-
-#### IPhone View
-![phone-view](src/assets/doc-images/iphone.png)
 
 ## Table of Contents
 1. [Local Setup Instructions](#local-setup)
@@ -19,10 +11,11 @@ Fink is a movie dashboard powered by [TMDB's](https://developers.themoviedb.org/
 3. [Production Build](#production-build)
 4. [Test Cases](#test-cases)
 5. [Test Case Coverage Screenshots](#test-coverage-reports)
+6. [Application Screenshots](#application-screenshots)
 
 
 <a name="local-setup"></a>
-## Local Setup
+## Local Setup Instructions
 
 Inorder to set it up on local, the TMDB api key has to be added in the `environment.ts` & `environment.prod.ts` file under `src/environments` directory 
 
@@ -37,10 +30,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 <a name="development-server"></a>
-## Build
+## Production Build
 
 Run `ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+<a href="#test-cases"></a>
+## Testcases 
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+<a href="test-coverage-reports"></a>
+## Test Case Coverage Screenshots
+
+![testcoverage](src/assets/doc-images/coverage.png)
+
+<a href="application-screenshots"></a>
+## Application Screenshots
+
+#### Dashboard - On hovering a movie
+![desktop-on-hover](src/assets/doc-images/on-hover.png)
+
+#### IPad View
+[![tab-view](src/assets/doc-images/ipad.png)](width)
+
+#### IPhone View
+![phone-view](src/assets/doc-images/iphone.png)
