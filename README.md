@@ -34,17 +34,17 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-<a href="#test-cases"></a>
+<a name="test-cases"></a>
 ## Testcases 
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-<a href="test-coverage-reports"></a>
+<a name="test-coverage-reports"></a>
 ## Test Case Coverage Screenshots
 
 ![testcoverage](src/assets/doc-images/coverage.png)
 
-<a href="application-screenshots"></a>
+<a name="application-screenshots"></a>
 ## Application Screenshots
 
 #### Dashboard - On hovering a movie
