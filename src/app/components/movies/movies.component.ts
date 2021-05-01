@@ -14,6 +14,7 @@ export class MoviesComponent implements OnInit {
   totalPages = 0;
   totalResults = 0;
   scrollDirection: boolean;
+  MAX_MOVIES_COUNT = 140; // TODO: update this on small devices
 
   constructor(public movieService: MoviesService) {
   }
@@ -44,8 +45,6 @@ export class MoviesComponent implements OnInit {
         this.totalPages = res.totalPages;
         this.totalResults = res.totalResults;
         this.updateMovieList(res.results);
-        console.log(this.movies.length);
-      }, err => {
       }
     );
   }
@@ -57,11 +56,11 @@ export class MoviesComponent implements OnInit {
    * @param {Array<Movie>} results
    * @private
    */
-  private updateMovieList(results: Array<Movie>): void {
+  updateMovieList(results: Array<Movie>): void {
     this.movies = this.scrollDirection ? [...this.movies, ...results] : [...results, ...this.movies];
-    if (this.movies.length > 140) {
-      const excessMoviesCount = this.movies.length - 140;
-      this.scrollDirection ? this.movies.splice(0, excessMoviesCount) : this.movies.splice(140, excessMoviesCount);
+    if (this.movies.length > this.MAX_MOVIES_COUNT) {
+      const excessMoviesCount = this.movies.length - this.MAX_MOVIES_COUNT;
+      this.scrollDirection ? this.movies.splice(0, excessMoviesCount) : this.movies.splice(this.MAX_MOVIES_COUNT, excessMoviesCount);
     }
   }
 
