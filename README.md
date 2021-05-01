@@ -17,11 +17,17 @@ Fink is a movie dashboard powered by [TMDB's](https://developers.themoviedb.org/
 <a name="local-setup"></a>
 ## Local Setup Instructions
 
-To set it up on local, the TMDB API key has to be added in the `environment.ts` & `environment.prod.ts` file under `src/environments` directory 
+Clone or download this repository to the local file system and
+update the `environment.ts` & `environment.prod.ts` files under `src/environments` directory with TMDB API key as shown in the image.
 
 ![environment file](src/assets/doc-images/env-config.png)
 
-Note: TMDB Api key can be created from TMDB Portal, [Check here](https://developers.themoviedb.org/3/getting-started/introduction)
+Note: TMDB Api key can be created from TMDB Portal, [Check here](https://developers.themoviedb.org/3/getting-started/introduction). 
+Also expecting to have a NPM (version 6.14.x) installed and configured in the machine. Please be ensure by executing the command `npm --version` on the terminal.
+
+After updating the API Key, install the project dependencies from root folder with the following command
+
+`npm install`
 
 <a name="development-server"></a>
 ## Development server
