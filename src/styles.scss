@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import "theme/variables";
+@import "core/global";
+@import "core/typography";
+@import "common/utility";
+
+@import "components/movies";
+@import "components/movie";
+@import "components/header";
+
+@import "common/responsiveness";

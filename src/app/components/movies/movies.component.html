@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="movie-dashboard-wrapper" infiniteScroll
+       [infiniteScrollDistance]="2"
+       [infiniteScrollUpDistance]="2"
+       [infiniteScrollThrottle]="50"
+       [alwaysCallback]="true"
+       (scrolled)="fetchNextPage(true)"
+  (scrolledUp)="fetchNextPage(false)">
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+
+  </div>
+</div>
