@@ -51,7 +51,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ![desktop-on-hover](src/assets/doc-images/on-hover.png)
 
 #### IPad View
-[![tab-view](src/assets/doc-images/ipad.png)](width)
+<img src="src/assets/doc-images/ipad.png" width="50%">
 
 #### IPhone View
-![phone-view](src/assets/doc-images/iphone.png)
+<img src="src/assets/doc-images/iphone.png" width="30%">
