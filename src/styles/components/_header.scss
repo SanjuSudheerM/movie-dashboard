@@ -66,7 +66,7 @@
     .logo {
       width: 30px;
       height: 30px;
-      background: #5fbba9;
+      background: var(--theme-active-header-menu-border);
       transform: rotate(
           -63deg
       ) skew(
@@ -84,7 +84,7 @@
         position: absolute;
         height: 30px;
         width: 30px;
-        background-color: #ffffff;
+        background-color: var(--theme-white);
         left: -14px;
         transform: rotate(
             37deg
