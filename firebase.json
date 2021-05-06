@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/fink",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

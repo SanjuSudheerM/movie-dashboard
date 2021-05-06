@@ -4,13 +4,18 @@ import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import {Movie, MovieResponse, Movies, MovieType} from '../../types/movie';
 import {map} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
 
-  constructor(private httpClient: HttpClient) {
+  apiKey: string;
+
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute) {
+    this.apiKey = this.route.snapshot.queryParamMap.get('apiKey');
+    console.log(this.route.snapshot.paramMap.get('apiKey'));
   }
 
   /**
@@ -19,7 +24,8 @@ export class MoviesService {
    * @param {string} language default language has been set to English
    */
   getPopularMovies(page: number, language: string = 'en-US'): Observable<Movies> {
-    const queryParams = `api_key=${environment.API_KEY}&language=${language}&page=${page}`;
+
+    const queryParams = `api_key=${this.apiKey}&language=${language}&page=${page}`;
     return this.httpClient.get(`${environment.SERVICE_BASE_URL}${environment.POPULAR_MOVIES}?${queryParams}`)
       .pipe(map((movies: MovieResponse) => this.mapMovies(movies)));
   }
