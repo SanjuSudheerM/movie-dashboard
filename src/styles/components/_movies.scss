@@ -1,6 +1,6 @@
 .container-movie {
-  margin-top: 60px;
-  height: calc(100vh - 60px);
+  //margin-top: 60px;
+  height: 100vh;
   overflow-y: auto;
 }
 
@@ -11,7 +11,7 @@
   grid-template-rows: repeat(auto-fill, 400px);
   grid-row: auto;
   overflow-y: auto;
-  padding: 30px 5% 30px;
+  padding: 97px 5% 30px;
   //max-height: calc(100vh - 97px);
   transition: all 0.5s ease;
 

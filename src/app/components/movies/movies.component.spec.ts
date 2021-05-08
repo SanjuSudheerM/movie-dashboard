@@ -6,6 +6,7 @@ import {MockMovieService} from '../../../tests/mock-services/movies.service';
 import {Movie} from '../../types/movie';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {SharedModule} from '../../shared/shared.module';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('MoviesComponent', () => {
   let component: MoviesComponent;
@@ -15,7 +16,7 @@ describe('MoviesComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [MoviesComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [SharedModule],
+      imports: [SharedModule, RouterTestingModule],
       providers: [{provide: MoviesService, useClass: MockMovieService}]
     })
       .compileComponents();

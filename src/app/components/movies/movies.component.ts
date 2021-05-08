@@ -40,6 +40,9 @@ export class MoviesComponent implements OnInit {
   public fetchNextPage(isScrollingDown: boolean): void {
     if (!this.isRequestInProgress) {
       isScrollingDown ? this.pageNumber += 1 : this.pageNumber -= 1;
+      if (this.scrollDirection !== isScrollingDown && !isScrollingDown) {
+        this.pageNumber -= 1;
+      }
       this.scrollDirection = isScrollingDown;
       if (
         ((this.pageNumber <= this.totalPages && isScrollingDown) ||

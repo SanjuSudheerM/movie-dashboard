@@ -4,6 +4,7 @@ import {MoviesService} from './movies.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {Movies} from '../../types/movie';
 import {environment} from '../../../environments/environment';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('MoviesService', () => {
   let service: MoviesService;
@@ -30,7 +31,7 @@ describe('MoviesService', () => {
   };
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule, RouterTestingModule]
     });
     service = TestBed.inject(MoviesService);
   });
@@ -41,13 +42,14 @@ describe('MoviesService', () => {
 
   it('should fetch movies from service', inject([HttpTestingController, MoviesService],
     (httpMock) => {
-
+      service.apiKey = 'test-api-key';
       service.getPopularMovies(1).subscribe((res: Movies) => {
         expect(res).toBeDefined();
         expect(res.results.length).toEqual(1);
         expect(res.page).toEqual(1);
       });
-      const queryParams = `api_key=${environment.API_KEY}&language=en-US&page=1`;
+      const api = 'test-api-key';
+      const queryParams = `api_key=${api}&language=en-US&page=1`;
       const url = `${environment.SERVICE_BASE_URL}${environment.POPULAR_MOVIES}?${queryParams}`;
       const request = httpMock.expectOne(url);
       expect(request.request.method).toBe('GET');

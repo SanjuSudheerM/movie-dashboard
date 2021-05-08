@@ -1,5 +1,6 @@
 # Fink (Movie Dashboard)
 Fink is a movie dashboard powered by [TMDB's](https://developers.themoviedb.org/3/movies/get-popular-movies) popular movies API.
+Demo URL: [https://movie-dashboard-exercise.web.app/?apiKey=YOUR_TMDB_API_KEY](https://movie-dashboard-exercise.web.app/?apiKey=API_KEY)
 
 #### Dashboard
 ![desktop](src/assets/doc-images/landing.png)
